@@ -6,7 +6,7 @@ import VideoDetail from './VideoDetails';
 import useVideos from '../hooks/useVideos';
 
 
-const KEY = 'AIzaSyALCCOtsV2JCK_1RPVttATnXkEg1SihVHM';
+
 
 const App = () => {
     
