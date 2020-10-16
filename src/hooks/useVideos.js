@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
 import youtube from '../apis/youtube';
+
+
 const KEY = 'AIzaSyALCCOtsV2JCK_1RPVttATnXkEg1SihVHM';
 const useVideos = (defaultSearchTerm) =>{
     const [videos, setVideos] = useState([]);
@@ -12,10 +14,9 @@ const useVideos = (defaultSearchTerm) =>{
         const response = await youtube.get("/search", {
                 params: {
                     q: term,
-                    part: "snippet",
-                    type: "videos",
+                    part: 'snippet',
                     maxResults: 5,
-                    key: KEY
+                    key: KEY,
                 }
             });
         setVideos(response.data.items);
